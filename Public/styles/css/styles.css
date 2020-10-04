@@ -1,5 +1,5 @@
 html {
-  background-color: $grand_background;
+  background-color: #e0e0e0;
   box-sizing: border-box;
   height: 100%;
 }
@@ -17,7 +17,7 @@ html {
 }
 body {
   -webkit-font-smoothing: antialiased;
-  color: $grand_color_base;
+  color: #54a6b8;
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
@@ -27,11 +27,10 @@ body {
 }
 main {
   width: 100vw;
-  margin-top: $top_nav;
 }
 a {
   background: transparent;
-  color: $color_link;
+  color: #c57126;
   text-decoration: none;
   outline: none;
   transition: color 0.2s;
@@ -191,55 +190,4 @@ h6 {
   margin: 0;
   background-color: #808080;
   align-self: flex-end;
-}
-.second {
-  display: inline-block;
-  width: 32px;
-  height: 21px;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-.home {
-  background-image: url("../../resources/user.svg");
-}
-.about {
-  background-image: url("../../resources/done.svg");
-}
-.more {
-  background-image: url("../../resources/more.svg");
-}
-.add {
-  background-image: url("../../resources/add.svg");
-}
-.galery {
-  background-image: url("../../resources/more.svg");
-}
-.org {
-  background-image: url("../../resources/org.svg");
-  margin-bottom: 9px;
-}
-.fa {
-  background-image: url("../../resources/facebook.svg");
-}
-.tw {
-  background-image: url("../../resources/twitter.svg");
-}
-.you {
-  background-image: url("../../resources/youtube.svg");
-}
-.ins {
-  background-image: url("../../resources/instagram.svg");
-}
-.in {
-  background-image: url("../../resources/linkedin.svg");
-}
-.lato {
-  font-family: 'Lato' sans-serif;
-}
-.nav-show {
-  margin-top: $show_nav;
-  margin-top: 0;
-  transition: all 0.5s;
 }
