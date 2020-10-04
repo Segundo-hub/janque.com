@@ -8,9 +8,11 @@
     background-image url('./../../resources/img/principal.png')
     background-size cover
     background-position center center
+    background-attachment fixed
     width 100%
     height 340px
-
+    @media screen and (min-width: tablet_breakpoints) 
+        height 500px
 .nav-center
     padding-top 60px
 .top-nav
@@ -22,9 +24,17 @@
     transition all .45s
     top 60px;
     width 100%
-    margin-left -500px
+    margin-left -600px
     background-color background_nav
+    @media screen and (min-width: tablet_breakpoints) 
+        background-color background_nav_optional
+        width 34%;
 .nav-items
     display block
-    margin 1.5rem 1rem 
+    margin .5rem
+    padding .7rem .35rem 
+    border-bottom solid .5px #3D3D3D
     color color_nav
+.size
+    width 24px
+    color teal
