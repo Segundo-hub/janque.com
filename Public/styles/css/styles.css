@@ -57,7 +57,7 @@ h6 {
   background-repeat: no-repeat;
   animation: banner 50s 0s infinite;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   .top-header {
     height: 600px;
   }
@@ -69,12 +69,12 @@ h6 {
   grid-template-rows: 56px;
   position: stiky;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   .movil-nav {
     display: none;
   }
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   .toggle img {
     display: none;
   }
@@ -95,7 +95,7 @@ h6 {
   background-color: #2a2a2a;
   width: 100%;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   .list-container {
     margin-top: 0;
     background: #1a1a1a;
@@ -122,7 +122,7 @@ h6 {
 .nav-items:hover .size {
   color: #008080;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   .nav-items {
     display: inline-block;
     border: none;
@@ -138,7 +138,7 @@ h6 {
   padding-top: 0.25rem;
   padding-bottom: 2rem;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   .list {
     margin-top: 0;
     background-color: transparent;
@@ -152,7 +152,7 @@ h6 {
 .logo {
   display: none;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   .logo {
     display: flex;
     cursor: pointer;
