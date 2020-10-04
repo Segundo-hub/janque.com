@@ -21,8 +21,6 @@ body {
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
-  display: flex;
-  flex-wrap: wrap;
   text-rendering: optimizeLegibility;
 }
 main {
