@@ -1,14 +1,14 @@
+@import './../c_Theme/_index'
+
 //=====MEDIA BREAKPOINTS =====//
-    phone_breakpoints = 500px;
-
-
-
+    device_pixel_radio = 2;
+    tablet_breakpoints = 890px;
 
 .top-header
-    background: linear-gradient(90deg, rgba(0,0,0,.3) 0%, rgba(0,0,0,.25) 68%, rgba(0,0,0,.5) 100%), url('../../resources/img/principal.png')
+    background url('../../resources/img/principal.png')
     width 100%
     background-size cover
-    background-position bottom center
+    background-position center center
     height 350px
     background-repeat no-repeat
     animation banner 50s 0s infinite
@@ -21,7 +21,6 @@
     display grid
     grid-template-columns 2.5fr 7.5fr
     grid-template-rows 56px
-    position stiky
     @media screen and (min-width phone_breakpoints)
             display none
 .toggle

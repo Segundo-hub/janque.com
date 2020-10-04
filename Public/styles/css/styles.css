@@ -49,15 +49,15 @@ h6 {
   font-weight: normal;
 }
 .top-header {
-  background: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.25) 68%, rgba(0,0,0,0.5) 100%), url("../../resources/img/principal.png");
+  background: url("../../resources/img/principal.png");
   width: 100%;
   background-size: cover;
-  background-position: bottom center;
+  background-position: center center;
   height: 350px;
   background-repeat: no-repeat;
   animation: banner 50s 0s infinite;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: phone_breakpoints) {
   .top-header {
     height: 600px;
   }
@@ -67,14 +67,13 @@ h6 {
   display: grid;
   grid-template-columns: 2.5fr 7.5fr;
   grid-template-rows: 56px;
-  position: stiky;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: phone_breakpoints) {
   .movil-nav {
     display: none;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: phone_breakpoints) {
   .toggle img {
     display: none;
   }
@@ -95,7 +94,7 @@ h6 {
   background-color: #2a2a2a;
   width: 100%;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: phone_breakpoints) {
   .list-container {
     margin-top: 0;
     background: #1a1a1a;
@@ -122,7 +121,7 @@ h6 {
 .nav-items:hover .size {
   color: #008080;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: phone_breakpoints) {
   .nav-items {
     display: inline-block;
     border: none;
@@ -138,7 +137,7 @@ h6 {
   padding-top: 0.25rem;
   padding-bottom: 2rem;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: phone_breakpoints) {
   .list {
     margin-top: 0;
     background-color: transparent;
@@ -152,7 +151,7 @@ h6 {
 .logo {
   display: none;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: phone_breakpoints) {
   .logo {
     display: flex;
     cursor: pointer;
