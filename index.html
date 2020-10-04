@@ -8,7 +8,7 @@
 	<title> Centro Poblado Janque </title>
 	<link rel="stylesheet" href="./Public/styles/css/normalize.css">
 	<link rel="stylesheet" href="./Public/styles/css/styles.css">
-	<link rel="shortcut icon" href="./Public/resources/favicon.svg">
+	<link rel="shortcut icon" href="./Public/resources/logo_optional.svg">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/c5e61bb352.js" crossorigin="anonymous"></script>
 </head>
@@ -23,8 +23,8 @@
 					<div class="item mid"></div>
 					<div class="item bottom"></div>
 				</a>
-				<a href="#" class="logo">
-					<img class="logo-img" src="./Public/resources/logo_optional.svg" alt="">
+				<a href="#" class="logo" data-open-after="logo">
+					<img  class="logo-img" src="./Public/resources/logo_optional.svg" alt="">
 				</a>
 			</div>
 			<div class="nav-container">
@@ -34,123 +34,41 @@
 					<a class="nav-items" href="/history"><i class="fas fa-monument size"></i>&#x20 HISTORIA </a>
 					<a class="nav-items" href="#"><i class="fas fa-align-center size"></i> &#x20 ABOUT</a>
 					<a class="nav-items" href="./Public/Janque-Lab.html"><i class="fas fa-atom size"></i> &#x20 JANQUE LAB </a>
+					<div class="nav-search">
+						<input class="nav-input-search" type="text" placeholder="Que desea buscar">
+					</div>
 				</div>
-
-			</div class="banner-content">
-			<div>
-				
+			</div>
+			<div class="description">
+				<p class="caption">CENTRO POBLADO DE JANQUE</p>
 			</div>
 		</nav>
 		
 	</header>
 
 	<main>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
+
+
+
+
+		<div class="map">
+			<iframe width="320" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=C%20P%20Janque%20Incahuasi&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+		</div>
 	</main>
 	<footer class="footer-main">
 		<div>
 
 		</div>
 	</footer>
+
+
+	<div class="loader" data-load="load">
+		<div class="container">
+			<span clas="fas-container">
+				<i class="fas fa-spinner"></i>
+			</span>
+		</div>
+	</div>
 	<script src="./Public/scripts/modules/index.js" type="module" ></script>
 	<script charset="UTF-8" src="./Public/scripts/main.js"></script>
 </body>

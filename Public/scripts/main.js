@@ -22,10 +22,22 @@ const $ = (e) => {
 	}
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+	$('[data-load]').classList.add('page-is-load')
+	setTimeout( () => {
+		document.body.removeChild($('[data-load]'))
+	}, 2000)
+})
+
 
 $('#toggle-top').onclick = () => {
 	$('#toggle-top').classList.toggle('is-active-toggle');
 	$('.nav-container').classList.toggle('is-active-nav')
 }
 
-
+window.onclick = (e) => {
+	if(e.target != $('#toggle-top') ){
+		$('#toggle-top').classList.remove('is-active-toggle');
+		$('.nav-container').classList.remove('is-active-nav')
+	}
+}
