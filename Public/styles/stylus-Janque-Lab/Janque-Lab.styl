@@ -1,0 +1,125 @@
+@charset 'UTF-8';
+
+path = './../../resources/';
+phoneBreakpoints = 400px;
+
+*
+	box-sizing border-box
+	-webkit-box-sizing border-box
+	-o-box-sizing border-box
+	-moz-box-sizing border-box
+	margin 0
+	padding 0
+	
+*:before, *:after
+	box-sizing inherit
+html
+	background-color #C0C0C0
+	font-family 'Roboto', sans-serif
+	box-sizing border-box
+body
+	display flex
+	min-height 100vh
+	flex-wrap wrap;
+	//background: rgb(164,164,164);
+	background: linear-gradient(90deg, rgba(164,164,164,0.6898109585631127) 0%, rgba(164,164,164,0.7738445720084909) 68%, rgba(164,164,164,1) 100%), url(./../../resources/font-lab.svg)
+	background-size cover
+	background-position top center
+nav
+	width 100%
+main 
+	width 100%;
+	display flex
+	justify-content center
+	align-items center
+	flex-direction column
+a
+	color #212121
+	text-decoration none
+	&:hover
+		color #6B6B6B
+
+.items
+	width 100%
+	height 50px
+	background-color #4C4C4C
+	display flex
+	justify-content space-around	
+	padding 20px 0
+	align-items center
+	color white
+	-webkit-box-shadow: -7px 7px 40px 3px rgba(82,82,82,1);
+	-moz-box-shadow: -7px 7px 40px 3px rgba(82,82,82,1);
+	box-shadow: -7px 7px 40px 3px rgba(82,82,82,1);
+.item 
+	display block;
+	color #D6D6D6
+	font-size .9rem
+	font-weight 300
+	width 30%
+	text-align center
+	padding 5px 4px
+	border .5px solid rgba(0,0,0,.1)
+	@media screen and (min-width: phoneBreakpoints) 
+		font-weight 400
+		font-size 1.2rem
+		border none
+
+.main-content
+	margin-top 40px
+	text-align center
+	position relative
+.img-logo
+	width 200px
+	height 200px 
+	display block
+	position relative
+	transition all .4s
+	&:hover
+		transform scale(1.2)
+		cursor pointer
+	@media screen and (min-width: phoneBreakpoints) 
+			width 300px
+			height 300px	
+				
+.information
+	margin-top 15px
+	font-size 1.4rem
+	color #246862
+	@media screen and (min-width: phoneBreakpoints) 
+		font-size 2rem
+
+.lab-footer
+	align-self flex-end
+	width 100%
+	padding 20px 20px 
+	color #A8A8A8
+	text-align center
+	font-weight 400
+	background-color #363636
+.icon
+	position relative
+	display inline-block
+	width 50px
+	height 50px
+	animation gitmove infinite 2s 
+	transition all .5s
+	&:hover
+		color teal
+
+.mitad
+	width 50%
+.inline-block
+	display inline-block
+.git
+	background-image url(path + 'github-2.svg')
+
+@keyframes gitmove 
+	0%
+		transform translateY(0)
+	65% 
+		transform translateY(5px)
+	75%
+		transform translateY(3px)
+	90%
+		transform translateY(6px)

@@ -1,0 +1,63 @@
+@import "../colors/_index";
+
+html {
+  background-color: $grand_background;
+  box-sizing: border-box;
+  height: 100%;
+}
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  &:before,
+  &:after { 
+    box-sizing: inherit;
+  }
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: $grand_color_base;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  text-rendering: optimizeLegibility;
+}
+main{
+  width: 100vw;
+  margin-top: $top_nav;
+}
+
+a {
+  background: transparent;
+  color: $color_link;
+  text-decoration: none;
+  outline: none;
+  transition: color .2s;
+}
+li{
+  list-style: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}

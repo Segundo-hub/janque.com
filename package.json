@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "A server for cp-janque and other countries with relationship janque",
+  "main": "index.js",
+  "scripts": {
+    "start": "node Server/server.js",
+    "test": "mocha",
+    "dev": "nodemon Server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Segundo-hub/cp-janque.git"
+  },
+  "author": "alex-segundo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Segundo-hub/cp-janque/issues"
+  },
+  "homepage": "https://github.com/Segundo-hub/cp-janque#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "nodemon": "^2.0.4"
+  }
+}

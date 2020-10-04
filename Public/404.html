@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> 404 Not Found </title>
+	<link rel="shortcut icon" href="../resources/favicon.svg">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		a{
+			text-decoration: none;
+			color: #05CFE7;
+			transition: color .25s ease;
+		}
+		a:hover{
+			color: teal;
+		}
+		html{
+			font-family: 'Roboto', sans-serif;
+		}
+		body{
+			background-color: #353535;
+			color: silver;
+			overflow: hidden;
+		}
+		button{
+			outline: none;
+			border: none;
+			cursor: pointer;
+			display: inline-block;
+			padding: .25rem;
+		}
+		.container{
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 5vh;
+		}
+		svg{
+			animation: moveY .8s linear 0s infinite alternate;
+			position: relative;
+			margin-right: 10px;
+			width: 100px;
+			height: 100px;
+		}
+		.circle{
+			box-shadow: 5px 5px 8px rgba(0,0,0,.5);
+		}
+		.error-img{
+			width: 100%;
+			height: 20vh;
+			text-align: center;
+		}
+		.error-content{
+			width: 100%;
+			text-align: center;
+		}
+		.error{
+			font-size: 2rem;
+			color: tomato;
+			animation: moveX .8s linear 0s infinite alternate ;
+			position: relative;
+		}
+		.error-url{
+			color: #00F4C9;
+			transition: color .2s;
+		}
+		.error-url:hover{
+			color: #36A3DC;
+		}
+		@keyframes moveY {
+		  0%{
+		    transform: translateY(2px);
+		    opacity: .5;
+		  }
+		  50%{
+		    transform: translateY(8px)
+		    opacity: 1;
+		  }
+		  75%{
+		    transform: translateY(12px);
+		    opacity: .9;
+		  }
+		}
+
+		@keyframes moveX {
+		  0%{
+		    transform: translateX(0px);
+		  }
+		  50%{
+		    transform: translateX(2px)
+		  }
+		  75%{
+		    transform: translateX(4px);
+		  }
+		  100%{
+		  	transform: translateX(6px);
+		  }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="error-img">
+			<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+				<path style="fill:#C00202;" class="circle" d="M256,0C115.3,0,0,115.3,0,256s115.3,256,256,256s256-115.3,256-256S396.7,0,256,0z"/>
+				<path style="fill:#F40000;" class="circle" d="M512,256c0,140.7-115.3,256-256,256V0C396.7,0,512,115.3,512,256z"/>
+				<polygon style="fill:#E7E7E7;" points="298.299,256 383.2,340.901 340.901,383.2 256,298.299 171.099,383.2 128.8,340.901 213.701,256 128.8,171.099 171.099,128.8 256,213.701 340.901,128.8 383.2,171.099 "/>
+				<polygon style="fill:#D3D3D8;" points="298.299,256 383.2,340.901 340.901,383.2 256,298.299 256,213.701 340.901,128.8 383.2,171.099 "/>
+			</svg>
+		</div>
+		<div class="error-content">
+			<p class="error">ERROR 404</p>
+			<p>No pudimos encontrar la ruta <a id="contentError" class="error-url"></a> es posible que el link este borrado o alla colocado mal el link.</p>
+				<p>Rescriba de nuevo el link.</p>
+			<p><a href="/">O REGRESA A LA PAGINA WEB DE CP-JANQUE</a></p>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+
+		let hrefValue = document.getElementById("hrefValue");
+		let url = window.location.href;
+		let content = document.getElementById('contentError');
+		content.innerHTML = `[ ${url} ]`;
+		content.href = url;
+
+	</script>
+</body>
+</html>
