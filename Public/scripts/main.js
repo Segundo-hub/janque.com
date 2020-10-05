@@ -22,12 +22,12 @@ const $ = (e) => {
 	}
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+window.onload = () => {
 	$('[data-load]').classList.add('page-is-load')
 	setTimeout( () => {
 		document.body.removeChild($('[data-load]'))
 	}, 2000)
-})
+}
 
 
 $('#toggle-top').onclick = () => {
@@ -35,9 +35,12 @@ $('#toggle-top').onclick = () => {
 	$('.nav-container').classList.toggle('is-active-nav')
 }
 
-window.onclick = (e) => {
-	if(e.target != $('#toggle-top') ){
-		$('#toggle-top').classList.remove('is-active-toggle');
-		$('.nav-container').classList.remove('is-active-nav')
+$('.img-banner-content ').forEach( (element, index) => {
+	element.onclick = () => {
+		$('#modal').classList.add('modal-img-view')
+		$('#src').src = element.firstElementChild.src;
 	}
+})
+$('[data-close-modal] ')[0].onclick = () => {
+	$('#modal').classList.remove('modal-img-view')
 }

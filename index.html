@@ -6,6 +6,7 @@
 	<meta name="description" content="Pagina Web del Centro Poblado de Janque">
 	<meta name="keywords" content="Yanque, Janque-Lab, Incahuasi, Centro Poblado Janque, C.P. Janque Incahuasi">
 	<title> Centro Poblado Janque </title>
+	<link rel="manifest" href="./manifest.json">
 	<link rel="stylesheet" href="./Public/styles/css/normalize.css">
 	<link rel="stylesheet" href="./Public/styles/css/styles.css">
 	<link rel="shortcut icon" href="./Public/resources/logo_optional.svg">
@@ -34,23 +35,52 @@
 					<a class="nav-items" href="/history"><i class="fas fa-monument size"></i>&#x20 HISTORIA </a>
 					<a class="nav-items" href="#"><i class="fas fa-align-center size"></i> &#x20 ABOUT</a>
 					<a class="nav-items" href="./Public/Janque-Lab.html"><i class="fas fa-atom size"></i> &#x20 JANQUE LAB </a>
-					<div class="nav-search">
+					<form class="nav-search">
 						<input class="nav-input-search" type="text" placeholder="Que desea buscar">
-					</div>
+						<input type="submit" value="" id="send" >
+						<label for="send" class="send-search">
+							<i class="fas fa-search"></i>
+						</label>
+					</form>
 				</div>
 			</div>
 			<div class="description">
 				<p class="caption">CENTRO POBLADO DE JANQUE</p>
 			</div>
 		</nav>
-		
 	</header>
 
 	<main>
-
-
-
-
+		<div class="hero-slider">
+			
+		</div>
+		<div class="banner">
+			<div class="banner__title">
+				<h2 class="banner__h2">Bienvenidos a la Web del Centro Poblado Janque</h2>
+				<button class="banner__btn">QUIERES SABER MAS</button>
+			</div>
+			<div class="banner__content">
+				<div class="img-banner-content" >
+					<img src="./Public/resources/img/gallery/item1.jpg" alt="" id="img-load">
+				</div>
+				<div class="img-banner-content">
+					<img src="./Public/resources/img/gallery/item2.jpg" alt="">
+				</div>
+				<div class="img-banner-content">
+					<img src="./Public/resources/img/gallery/item3.jpg" alt="">
+				</div>
+				<div class="img-banner-content">
+					<img src="./Public/resources/img/gallery/item4.jpg" alt="">
+				</div>
+				<div class="img-banner-content">
+					<img src="./Public/resources/img/gallery/item5.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="none" id="modal">
+			<span class="btn" data-close-modal><i class="far fa-window-close"></i></span>
+			<img  id="src" src="./Public/resources/img/gallery/item2.jpg" alt="">
+		</div>
 		<div class="map">
 			<iframe width="320" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=C%20P%20Janque%20Incahuasi&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 		</div>

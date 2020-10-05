@@ -40,6 +40,11 @@ img {
   height: auto;
   max-width: 100%;
 }
+button {
+  outline: none;
+  border: none;
+  display: inline-block;
+}
 input {
   outline: none;
   border: none;
@@ -58,7 +63,7 @@ h6 {
   background-size: cover;
   background-position: right center;
   width: 100%;
-  height: 340px;
+  height: 460px;
 }
 .header:hover {
   transition: all 1s;
@@ -85,6 +90,7 @@ h6 {
   top: 0;
   padding-top: 60px;
   width: 100%;
+  height: 100%;
   margin-left: -600px;
 }
 @media screen and (min-width: 890px) {
@@ -114,16 +120,98 @@ h6 {
   color: #007e83;
 }
 .nav-search {
-  width: 100%;
-  margin: 15px;
+  width: 90%;
+  margin: 15px auto;
+  border-radius: 2px;
+  background-color: #c0c0c0;
+  position: relative;
 }
 .nav-input-search {
   width: 90%;
-  border-radius: 2px;
+  background-color: #c0c0c0;
   padding: 8px;
   font-size: 1.1rem;
-  background-color: #c0c0c0;
   margin: auto;
+}
+.send-search {
+  position: absolute;
+  color: #272727;
+  top: 10px;
+  right: 8px;
+}
+.hero-slider {
+  height: 200px;
+  background-color: #a0a0a0;
+}
+.banner {
+  height: 680px;
+  background-color: #1b1b1b;
+}
+@media screen and (min-width: 890px) {
+  .banner {
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.banner__title {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 890px) {
+  .banner__title {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.banner__h2 {
+  padding: 40px 10px 10px 10px;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #027d6d;
+  margin: 0;
+}
+@media screen and (min-width: 890px) {
+  .banner__h2 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+.banner__btn {
+  background-color: #d28430;
+  padding: 10px;
+  margin: 8px auto;
+}
+.banner__content {
+  height: 70%;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+@media screen and (min-width: 890px) {
+  .banner__content {
+    width: 60%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+    padding: 40px 70px;
+  }
+}
+.img-banner-content:nth-child(1) {
+  grid-column: 1/span 2;
+}
+.img-banner-content {
+  transition: all 0.35s;
+}
+.img-banner-content:hover {
+  filter: brightness(0.5);
+  cursor: pointer;
 }
 .icon-nav {
   display: inline-block;
@@ -163,36 +251,10 @@ h6 {
   height: 60px;
   background-color: rgba(49,49,49,0.9);
 }
-.middle-logo {
-  position: absolute;
-  left: 70px;
-  width: 70px;
-  height: 60px;
-}
 .logo-img {
   padding-top: 5%;
   width: 100%;
   height: 90%;
-}
-.loader {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1200;
-  top: 0;
-  background-color: #2a2a2a;
-}
-.loader .container {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.loader i {
-  color: #03627a;
-  font-size: 100px;
-  animation: loader-icon 1.5s infinite;
 }
 .description {
   background-color: rgba(0,0,0,0.4);
@@ -219,6 +281,62 @@ h6 {
     word-spacing: 15px;
     letter-spacing: 4px;
   }
+}
+.loader {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1200;
+  top: 0;
+  background-color: #2a2a2a;
+}
+.loader .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader i {
+  color: #03627a;
+  font-size: 100px;
+  animation: loader-icon 1.5s infinite;
+}
+.none {
+  display: none;
+}
+.modal-img-view {
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0,0,0,0.6);
+  padding: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 890px) {
+  .modal-img-view {
+    padding: 16%;
+  }
+}
+.modal-img-view img {
+  width: 100%;
+}
+.modal-img-view .btn {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #c0c0c0;
+  font-size: 2rem;
+  cursor: pointer;
 }
 @keyframes loader-icon {
   from {

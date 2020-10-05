@@ -1,0 +1,12 @@
+{
+	"name": "C.P. Janque",
+	"short_name": "Janque",
+	"description": "Pagina Web del Centro Poblado de Janque",
+	"background_color": "#434343",
+	"theme_color": "#043536",
+	"orientation": "portrait",
+	"display": "standalone",
+	"start_url": "./?utm_source=web_app_manifest",
+	"scope": "./",
+	"lang": "es-PE"
+}
