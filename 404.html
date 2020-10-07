@@ -4,15 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> 404 Not Found </title>
-	<link rel="shortcut icon" href="../resources/favicon.svg">
+	<link rel="shortcut icon" href="./Public/resources/logo_optional.svg">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 	<style>
 		*{
 			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
 		}
 		a{
 			text-decoration: none;
-			color: #05CFE7;
+			color: #276469;
 			transition: color .25s ease;
 		}
 		a:hover{
@@ -20,10 +22,11 @@
 		}
 		html{
 			font-family: 'Roboto', sans-serif;
+			font-size: 1.3rem;
 		}
 		body{
-			background-color: #353535;
-			color: silver;
+			background-color: silver;
+			color: #242424;
 			overflow: hidden;
 		}
 		button{
@@ -32,6 +35,11 @@
 			cursor: pointer;
 			display: inline-block;
 			padding: .25rem;
+		}
+		img{
+			animation: moveY 1.2s linear 0s infinite alternate;
+			position: absolute;
+			top:25vh;
 		}
 		.container{
 			width: 100%;
@@ -42,33 +50,42 @@
 			align-items: center;
 			margin-bottom: 5vh;
 		}
-		svg{
-			animation: moveY .8s linear 0s infinite alternate;
-			position: relative;
-			margin-right: 10px;
-			width: 100px;
-			height: 100px;
-		}
-		.circle{
-			box-shadow: 5px 5px 8px rgba(0,0,0,.5);
+		.nav-error{
+			background-color: #243F47;
+			width: 100%;
+			height: 60px;
+			color: #AAAAAA;
+			display: flex;
+			justify-content:  space-between;
+			padding: 0  25vw;
+			align-items: center; 
 		}
 		.error-img{
 			width: 100%;
 			height: 20vh;
 			text-align: center;
+			display: flex;
+			justify-content: center;
 		}
 		.error-content{
 			width: 100%;
 			text-align: center;
 		}
+		.nav_title{
+			color: #037D7C;
+		}
+		.theme{
+
+		}
 		.error{
 			font-size: 2rem;
-			color: tomato;
+			margin-bottom: 2rem;
+			color: #E06513;
 			animation: moveX .8s linear 0s infinite alternate ;
 			position: relative;
 		}
 		.error-url{
-			color: #00F4C9;
+			color: #9D640A;
 			transition: color .2s;
 		}
 		.error-url:hover{
@@ -103,22 +120,35 @@
 		  	transform: translateX(6px);
 		  }
 		}
+		@media (max-width: 400px){
+			body{
+				font-size: .8rem;
+			}
+			.nav-error{
+				text-align: center;
+				width: 100%;
+				padding: 0;
+				display: block;
+			}
+			.theme{
+				padding: 6px;
+			}
+		}
 
 	</style>
 </head>
 <body>
+	<nav class="nav-error">
+		<p class="theme">LO SENTIMOS MUCHO</p>
+		<a href="/" class="nav_title">REGRESAR A LA WEB DE JANQUE</a>
+	</nav>
 	<div class="container">
 		<div class="error-img">
-			<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-				<path style="fill:#C00202;" class="circle" d="M256,0C115.3,0,0,115.3,0,256s115.3,256,256,256s256-115.3,256-256S396.7,0,256,0z"/>
-				<path style="fill:#F40000;" class="circle" d="M512,256c0,140.7-115.3,256-256,256V0C396.7,0,512,115.3,512,256z"/>
-				<polygon style="fill:#E7E7E7;" points="298.299,256 383.2,340.901 340.901,383.2 256,298.299 171.099,383.2 128.8,340.901 213.701,256 128.8,171.099 171.099,128.8 256,213.701 340.901,128.8 383.2,171.099 "/>
-				<polygon style="fill:#D3D3D8;" points="298.299,256 383.2,340.901 340.901,383.2 256,298.299 256,213.701 340.901,128.8 383.2,171.099 "/>
-			</svg>
+			<img width="300" src="./Public/resources/erro_404.png" alt="">
 		</div>
 		<div class="error-content">
 			<p class="error">ERROR 404</p>
-			<p>No pudimos encontrar la ruta <a id="contentError" class="error-url"></a> es posible que el link este borrado o alla colocado mal el link.</p>
+			<p>El osito no pudo encontar la ruta<a id="contentError" class="error-url"></a> es posible que el link este borrado o alla colocado mal el link.</p>
 				<p>Rescriba de nuevo el link.</p>
 			<p><a href="/">O REGRESA A LA PAGINA WEB DE CP-JANQUE</a></p>
 		</div>

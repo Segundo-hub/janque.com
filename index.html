@@ -17,7 +17,7 @@
 <body>
 
 	<header class="header" >
-		<nav class="nav-center">
+		<nav class="nav-center" data-nav-center="center">
 			<div class="top-nav">
 				<a href="javascript:void(0)" class="icon-nav" id="toggle-top">
 					<div class="item top"></div>
@@ -43,6 +43,19 @@
 						</label>
 					</form>
 				</div>
+				<div class="credits">
+					<div class="copy">
+						<p>&copy Todos los derechos reservados</p>
+						<p>Municipalidad de Janque</p>
+					</div>
+					<div class="footer-contact__item">
+						<span class="contact__caption"><p>Sigue a Janque en</p></span>
+						<a href="#"><i class="fab fa-facebook-square"></i></a>
+						<a href="#"><i class="fab fa-twitter-square"></i></a>
+						<a href="#"><i class="fab fa-youtube-square"></i></a>
+						<a href="#"><i class="fab fa-instagram-square"></i></a>
+					</div>
+				</div>
 			</div>
 			<div class="description">
 				<p class="caption">CENTRO POBLADO DE JANQUE</p>
@@ -60,34 +73,69 @@
 				<button class="banner__btn">QUIERES SABER MAS</button>
 			</div>
 			<div class="banner__content">
-				<div class="img-banner-content" >
-					<img src="./Public/resources/img/gallery/item1.jpg" alt="" id="img-load">
+				<div class="slide-wrap" id="slide-wrap">
+					<div class="load-container">
+						<div class="img-banner-items">
+							<img class="img-load-content" src="./Public/resources/img/gallery/item1.jpg" alt="" id="img-load">
+						</div>
+						<div class="img-banner-items">
+							<img class="img-load-content" src="./Public/resources/img/gallery/item2.jpg" alt="" id="img-load">
+						</div>
+						<div class="img-banner-items">
+							<img class="img-load-content" src="./Public/resources/img/gallery/item3.jpg" alt="" id="img-load">
+						</div>
+						<div class="img-banner-items">
+							<img class="img-load-content" src="./Public/resources/img/gallery/item4.jpg" alt="" id="img-load">
+						</div>
+						<div class="img-banner-items">
+							<img class="img-load-content" src="./Public/resources/img/gallery/item5.jpg" alt="" id="img-load">
+						</div>
+						<div class="img-banner-items">
+							<img class="img-load-content" src="./Public/resources/img/gallery/item1.jpg" alt="" id="img-load">
+						</div>
+					</div>
+					<div class="icon-control">
+						<span class="btn-prev" ><i data-prev="prev" class="fas fa-chevron-left"></i></span>
+						<span class="btn-next" ><i data-next="next" class="fas fa-chevron-right"></i></span>
+					</div>
 				</div>
 				<div class="img-banner-content">
-					<img src="./Public/resources/img/gallery/item2.jpg" alt="">
+					<img src="./Public/resources/img/gallery/option1.jpg" alt="">
 				</div>
 				<div class="img-banner-content">
-					<img src="./Public/resources/img/gallery/item3.jpg" alt="">
+					<img src="./Public/resources/img/gallery/option2.jpg" alt="">
 				</div>
 				<div class="img-banner-content">
 					<img src="./Public/resources/img/gallery/item4.jpg" alt="">
 				</div>
 				<div class="img-banner-content">
-					<img src="./Public/resources/img/gallery/item5.jpg" alt="">
+					<img src="./Public/resources/img/banner_janque.png" alt="">
 				</div>
 			</div>
 		</div>
+
 		<div class="none" id="modal">
 			<span class="btn" data-close-modal><i class="far fa-window-close"></i></span>
 			<img  id="src" src="./Public/resources/img/gallery/item2.jpg" alt="">
 		</div>
+
 		<div class="map">
-			<iframe width="320" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=C%20P%20Janque%20Incahuasi&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+			<iframe class="map__canvas" src="https://maps.google.com/maps?q=C%20P%20Janque%20Incahuasi&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 		</div>
 	</main>
-	<footer class="footer-main">
-		<div>
 
+	<footer class="footer">
+		<div class="footer__about">
+			<p>&copy Todos los derechos reservados</p><p>Centro Poblado de Janque</p>
+		</div>
+		<div class="footer__contact">
+			<div class="footer-contact__item">
+				<span class="contact__caption"><p>Sigue a Janque en</p></span>
+				<a href="#"><i class="fab fa-facebook-square"></i></a>
+				<a href="#"><i class="fab fa-twitter-square"></i></a>
+				<a href="#"><i class="fab fa-youtube-square"></i></a>
+				<a href="#"><i class="fab fa-instagram-square"></i></a>
+			</div>
 		</div>
 	</footer>
 
@@ -99,6 +147,7 @@
 			</span>
 		</div>
 	</div>
+
 	<script src="./Public/scripts/modules/index.js" type="module" ></script>
 	<script charset="UTF-8" src="./Public/scripts/main.js"></script>
 </body>

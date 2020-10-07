@@ -18,7 +18,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   color: #54a6b8;
-  font-family: 'Port Lligat Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -89,6 +89,7 @@ h6 {
   background-color: rgba(0,0,0,0.85);
   top: 0;
   padding-top: 60px;
+  z-index: 900;
   width: 100%;
   height: 100%;
   margin-left: -600px;
@@ -137,7 +138,39 @@ h6 {
   position: absolute;
   color: #272727;
   top: 10px;
+  transition: all 0.25s;
   right: 8px;
+}
+.send-search:hover {
+  cursor: pointer;
+  color: #595959;
+}
+.credits {
+  width: 100%;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 0;
+  padding: 18px 0;
+  display: flex;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 890px) {
+  .credits {
+    font-size: 1.2rem;
+    background-color: #313131;
+    padding: 20px 0;
+  }
+}
+.credits i {
+  font-size: 1.5rem;
+}
+.copy {
+  text-align: center;
+  margin: 1rem 0;
+  color: #a17d4e;
 }
 .hero-slider {
   height: 200px;
@@ -203,8 +236,64 @@ h6 {
     padding: 40px 70px;
   }
 }
-.img-banner-content:nth-child(1) {
+.slide-wrap {
   grid-column: 1/span 2;
+  grid-row: 1/span 2;
+  height: 100%;
+  margin: auto 0;
+  position: relative;
+  z-index: 800;
+  width: 100%;
+  overflow: hidden;
+}
+@media screen and (min-width: 890px) {
+  .slide-wrap {
+    height: 86%;
+  }
+}
+.load-container {
+  transition: all 0.7s;
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  margin-left: 0;
+  flex-direction: row;
+  min-height: 100%;
+}
+.img-banner-items {
+  min-width: 100%;
+  width: 100%;
+}
+.img-load-content {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.btn-prev,
+.btn-next {
+  position: absolute;
+  top: 45%;
+  padding: 5px;
+  border-radius: 3px;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.7);
+}
+.btn-prev i,
+.btn-next i {
+  color: #c0c0c0;
+  font-size: 1.2rem;
+}
+.btn-prev i:hover,
+.btn-next i:hover {
+  transform: scale(1.1);
+  color: #b89749;
+  cursor: pointer;
+}
+.btn-next {
+  right: 10px;
+}
+.btn-prev {
+  left: 10px;
 }
 .img-banner-content {
   transition: all 0.35s;
@@ -213,12 +302,92 @@ h6 {
   filter: brightness(0.5);
   cursor: pointer;
 }
+.map {
+  width: 100%;
+  margin: 0;
+  background-color: #8b8f83;
+  padding: 10px 0;
+}
+.map__canvas {
+  width: 100%;
+  padding: 5px;
+  height: 300px;
+  margin: 0;
+}
+.footer {
+  background-color: #1c2120;
+  min-width: 100vw;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+}
+@media screen and (min-width: 890px) {
+  .footer {
+    min-width: 90%;
+    width: 88%;
+    margin: 2rem auto;
+    border-radius: 5px;
+    flex-direction: row;
+  }
+}
+.footer__about {
+  text-align: center;
+  font-size: 1rem;
+  color: #808080;
+  padding: 0.5rem;
+  border-bottom: 1px solid #5a5656;
+}
+@media screen and (min-width: 890px) {
+  .footer__about {
+    width: 50%;
+    font-size: 1.2rem;
+    border: none;
+    border-right: 1px solid #5a5656;
+  }
+}
+.footer__contact {
+  margin: 1rem;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 890px) {
+  .footer__contact {
+    width: 50%;
+    font-size: 2rem;
+  }
+}
+.footer-contact__item i {
+  color: #b1a995;
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  transition: all 0.25s;
+}
+.footer-contact__item i:hover {
+  transform: scale(1.25);
+}
+.contact__caption {
+  font-size: 1rem;
+  display: block;
+  color: #808080;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+@media screen and (min-width: 890px) {
+  .contact__caption {
+    font-size: 1.2rem;
+  }
+}
 .icon-nav {
   display: inline-block;
   background: #171717;
   width: 70px;
   position: absolute;
-  z-index: 1;
+  z-index: 900;
   height: 60px;
   top: 0;
 }
@@ -306,9 +475,10 @@ h6 {
   display: none;
 }
 .modal-img-view {
+  transition: all 0.5s;
   position: fixed;
   z-index: 1000;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.8);
   padding: 10px;
   top: 0;
   left: 0;
@@ -320,7 +490,7 @@ h6 {
 }
 @media screen and (min-width: 890px) {
   .modal-img-view {
-    padding: 16%;
+    padding: 20%;
   }
 }
 .modal-img-view img {
@@ -330,7 +500,7 @@ h6 {
   display: inline-block;
   padding: 10px;
   border-radius: 4px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.3);
   position: absolute;
   top: 15px;
   right: 15px;
@@ -369,6 +539,10 @@ h6 {
 .is-active-nav {
   transition: all 0.5s;
   margin-left: 0;
+}
+.element-is-active {
+  opacity: 1;
+  transition: all 0.25s;
 }
 .page-is-load {
   opacity: 0;

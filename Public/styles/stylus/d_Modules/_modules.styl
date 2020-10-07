@@ -6,7 +6,7 @@
 	background #171717
 	width 70px
 	position absolute
-	z-index 1
+	z-index 900
 	height 60px
 	top 0
 	.item
@@ -90,9 +90,10 @@
 .none
 	display none
 .modal-img-view
+	transition all .5s
 	position fixed
 	z-index 1000
-	background-color rgba(#000,.6)
+	background-color rgba(#000,.8)
 	padding 10px
 	top 0
 	left 0
@@ -102,14 +103,14 @@
 	justify-content center
 	align-items center
 	@media screen and (min-width: tablet_breakpoints)
-		padding 16%
+		padding 20%
 	img
 		width 100%
 	.btn
 		display inline-block
 		padding 10px
 		border-radius 4px
-		background-color rgba(#000,.5)
+		background-color rgba(#000,.3)
 		position absolute
 		top 15px
 		right 15px
