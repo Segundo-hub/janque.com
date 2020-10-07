@@ -6,3 +6,6 @@
 *prepros.config
 *.vscode/
 
+*.firebase
+*firebase.json
+
