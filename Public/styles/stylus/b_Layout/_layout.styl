@@ -34,7 +34,7 @@
     z-index 900
     width 100%
     height 100%
-    margin-left -600px
+    margin-left -900px
     @media screen and (min-width: tablet_breakpoints) 
         width 34%;
 .nav-items:nth-child(1)
@@ -272,3 +272,74 @@
     margin-bottom .25rem
     @media screen and (min-width: tablet_breakpoints)
         font-size 1.2rem
+        
+
+
+//*********************** HYSTORY/INDEX.HTML STYLES ****************************//
+    
+.header-main
+    @extend .header
+    animation changecolor 10s infinite ease-in-out
+    background #1C2F35;
+    transition background 1.5s
+    &:hover
+        background #1D2E2F;
+        
+@keyframes changecolor 
+    from
+        background: rgb(6,30,22);
+        background: -moz-linear-gradient(90deg, rgba(6,30,22,1) 0%, rgba(34,82,86,1) 46%, #144D48 100%);
+        background: -webkit-linear-gradient(90deg, rgba(6,30,22,1) 0%, rgba(34,82,86,1) 46%, #144D48 100%);
+        background: linear-gradient(90deg, rgba(6,30,22,1) 0%, rgba(34,82,86,1) 46%, #144D48 100%);
+    to
+        background: rgb(6,30,28);
+        background: -moz-linear-gradient(29deg, rgba(6,30,28,1) 0%, rgba(68,61,27,1) 53%, rgba(55,26,37,1) 100%);
+        background: -webkit-linear-gradient(29deg, rgba(6,30,28,1) 0%, rgba(68,61,27,1) 53%, rgba(55,26,37,1) 100%);
+        background: linear-gradient(29deg, rgba(6,30,28,1) 0%, rgba(68,61,27,1) 53%, rgba(55,26,37,1) 100%);
+.container-main
+    width 100%
+    padding 25px 10px
+    @media screen and (min-width: tablet_breakpoints)
+        padding 20px 5px
+        width 90% 
+        margin 20px auto
+    img
+        float right
+        padding 10px
+        width 100%
+        display inline-block
+        @media screen and (min-width: tablet_breakpoints)
+            width 800px
+            margin 20px 
+            height auto
+.wrap-title
+    font-weight 300
+    display block
+    margin 1rem
+    font-size 1.6rem
+    @media screen and (min-width: tablet_breakpoints)
+        font-size 2.5rem
+        margin 0
+        padding 20px 0
+
+.history_title
+    text-align center
+    margin 0
+    padding 20px 10px 10px 10px
+    color #393937
+    font-weight 500
+    @media screen and (min-width: tablet_breakpoints)
+        font-size 2.5rem 
+.text-container
+    font-size 1.15rem
+    background-color silver
+    border .5px solid #B4B3B3
+    border-radius 5px 
+    padding 20px 
+    p
+        color #2F4043   
+.creditos__history
+    text-align right
+    display block 
+    margin 40px 10px
+        

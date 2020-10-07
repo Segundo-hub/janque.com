@@ -57,7 +57,8 @@ h5,
 h6 {
   font-weight: normal;
 }
-.header {
+.header,
+.header-main {
   transition: all 1s;
   background-image: url("./../../resources/img/principal.png");
   background-size: cover;
@@ -65,12 +66,14 @@ h6 {
   width: 100%;
   height: 460px;
 }
-.header:hover {
+.header:hover,
+.header-main:hover {
   transition: all 1s;
   background-image: url("./../../resources/img/header.png");
 }
 @media screen and (min-width: 890px) {
-  .header {
+  .header,
+  .header-main {
     height: 600px;
     background-position: top center;
   }
@@ -92,7 +95,7 @@ h6 {
   z-index: 900;
   width: 100%;
   height: 100%;
-  margin-left: -600px;
+  margin-left: -900px;
 }
 @media screen and (min-width: 890px) {
   .nav-container {
@@ -382,6 +385,88 @@ h6 {
     font-size: 1.2rem;
   }
 }
+.header-main {
+  animation: changecolor 10s infinite ease-in-out;
+  background: #1c2f35;
+  transition: background 1.5s;
+}
+.header-main:hover {
+  background: #1d2e2f;
+}
+.container-main {
+  width: 100%;
+  padding: 25px 10px;
+}
+@media screen and (min-width: 890px) {
+  .container-main {
+    padding: 20px 5px;
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+.container-main img {
+  float: right;
+  padding: 10px;
+  width: 100%;
+  display: inline-block;
+}
+@media screen and (min-width: 890px) {
+  .container-main img {
+    width: 800px;
+    margin: 20px;
+    height: auto;
+  }
+}
+.wrap-title {
+  font-weight: 300;
+  display: block;
+  margin: 1rem;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 890px) {
+  .wrap-title {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 20px 0;
+  }
+}
+.history_title {
+  text-align: center;
+  margin: 0;
+  padding: 20px 10px 10px 10px;
+  color: #393937;
+  font-weight: 500;
+}
+@media screen and (min-width: 890px) {
+  .history_title {
+    font-size: 2.5rem;
+  }
+}
+.text-container {
+  font-size: 1.15rem;
+  background-color: #c0c0c0;
+  border: 0.5px solid #b4b3b3;
+  border-radius: 5px;
+  padding: 20px;
+}
+.text-container p {
+  color: #2f4043;
+}
+.creditos__history {
+  text-align: right;
+  display: block;
+  margin: 40px 10px;
+}
+@keyframes changecolor {
+  from {
+    background: #061e16;
+    background: linear-gradient(90deg, #061e16 0%, #225256 46%, #144d48 100%);
+  }
+  to {
+    background: #061e1c;
+    background: linear-gradient(29deg, #061e1c 0%, #443d1b 53%, #371a25 100%);
+  }
+}
 .icon-nav {
   display: inline-block;
   background: #171717;
@@ -430,19 +515,29 @@ h6 {
   border: 0.5px solid #515151;
   color: #c0c0c0;
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 100px;
   padding: 10px;
+}
+@media screen and (min-width: 890px) {
+  .description {
+    margin-top: 200px;
+    width: 80%;
+  }
 }
 .caption {
   font-family: "lato";
   font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+  word-spacing: 5px;
   transition: all 0.3s ease-in-out;
 }
 @media screen and (min-width: 890px) {
   .caption {
     font-size: 1.8rem;
+    font-weight: 400;
   }
   .caption:hover {
     cursor: pointer;
